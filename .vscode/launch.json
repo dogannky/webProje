@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/dogan/webProje",
-      "program": "c:/Users/dogan/webProje/build/Debug/outDebug",
+      "cwd": "c:/Users/dogan/webProje/styles/style.css",
+      "program": "c:/Users/dogan/webProje/styles/style.css/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
