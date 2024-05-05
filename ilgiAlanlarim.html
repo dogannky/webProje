@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İlgi Alanlarım</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- İhtiyaç duyulursa CSS dosyaları buraya eklenebilir -->
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Şehrim</a>
+        <!-- Navbar düğmesi mobil cihazlarda gösterilir -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar menüsü -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="main.html">Anasayfa <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sehrim.html">Şehrim</a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mirasimiz.html">Şehrin Takımı</a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ilgiAlanlarim.html">İlgi Alanlarım</a> 
+                </li>
+            </ul>
+        </div>
+    </nav>
+     <div class="container mt-4">
+        <h1 class="text-center mb-4">Popüler Filmler</h1>
+        <div id="filmListesi" class="row"></div>
+    </div>
+
+    <script>
+        // TMDb API'den film verilerini almak için JavaScript kullanımı
+        // Öncelikle API anahtarınızı buraya ekleyin
+        const API_KEY = '559c4b07216cfb51b039f788ca66515a';
+        const API_URL = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${API_KEY}`;
+
+        // Veriyi almak için fetch kullanımı
+        fetch(API_URL)
+            .then(response => response.json())
+            .then(data => {
+                const filmListesi = document.getElementById('filmListesi');
+                // API'den gelen verileri döngüyle işleme
+                data.results.forEach(film => {
+                    // Her film için kart oluştur
+                    const filmKarti = document.createElement('div');
+                    filmKarti.classList.add('col-md-4', 'mb-4');
+
+                    // Film başlığı
+                    const baslik = document.createElement('h3');
+                    baslik.textContent = film.title;
+
+                    // Film resmi
+                    const resim = document.createElement('img');
+                    resim.src = `https://image.tmdb.org/t/p/w500/${film.poster_path}`;
+                    resim.alt = film.title;
+                    resim.classList.add('img-fluid');
+
+                    // Film açıklaması
+                    const aciklama = document.createElement('p');
+                    aciklama.textContent = film.overview;
+
+                    // Kartı oluşturulan elemanları ekle
+                    filmKarti.appendChild(baslik);
+                    filmKarti.appendChild(resim);
+                    filmKarti.appendChild(aciklama);
+
+                    // Film listesine kartı ekle
+                    filmListesi.appendChild(filmKarti);
+                });
+            })
+            .catch(error => console.error('Hata:', error));
+    </script>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+    
+</body>
+</html>
