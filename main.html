@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Biyografik Giriş Sayfası</title>
@@ -8,50 +9,77 @@
 <style>
     .card-img-top {
     
-    height: auto; /* Resmin orijinal boyutunu koru */
+    height: 500px; /* Resmin orijinal boyutunu koru */
   }
+  .card-body {
+    font-family: Arial, sans-serif; /* Yazı tipi */
+    color:rgb(51, 104, 153); /* Yazı rengi */
+    font-size: 16px; /* Yazı boyutu */
+    line-height: 1.6; /* Satır yüksekliği */
+}
+
+.card-title {
+    color: #007bff; /* Başlık rengi */
+    font-size: 24px; /* Başlık boyutu */
+    font-weight: bold; /* Kalın font */
+}
+
+.card-text {
+    font-size: 18px; /* Kart metni boyutu */
+}
+
 </style>
+
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Anasayfa</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="ozgecmis.html">Özgeçmiş <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Hakkımızda
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">İletişim</a>
-      </li>
-    </ul>
-  </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Şehrim</a>
+    <!-- Navbar düğmesi mobil cihazlarda gösterilir -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Navbar menüsü -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="main.html">Anasayfa <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="sehrim.html">Şehrim</a> 
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="mirasimiz.html">Şehrin Takımı</a> 
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ilgiAlanlarim.html">İlgi Alanlarım</a> 
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="iletisim.html">İletişim</a> 
+            </li>
+        </ul>
+    </div>
 </nav>
 
 <div class="container mt-4">
-  <h1>Kendimi Tanıtıyorum</h1>
+  <h1>Hakkımda</h1>
   <hr>
   <div class="row">
     <div class="col-md-4 text-center">
-      <img src="/resimler/shocked-kendall-roy-succession-hb6f66o9wauzjlgi.jpg" class="img-fluid" alt="Profil Resmi">
+      <img src="/resimler/Jeremy Strong as Kendall Roy in Succession.jpeg" class="img-fluid" alt="Profil Resmi">
     </div>
     <div class="col-md-8">
       <h2>Doğan Kaya</h2>
       <p>
-        Merhaba, ben Doğan. Nevzat Karabağ Anadolu Lisesi mezunuyum. Erzurum şehrinde yaşıyorum. Şu anda Sakarya üniversitesi 1.sınıf öğrencisiyim.
+        Merhaba, ben Doğan. Nevzat Karabağ Anadolu Lisesi mezunuyum. Erzurum şehrinde yaşıyorum. Şu anda Sakarya üniversitesi 1.sınıf öğrencisiyim. Daha çok oyun oynamak film ve dizi izlemeyi tercih ediyorum. Uyumayı çok severim. Basketbol oynamayı ve izlemeyi çok seviyorum. Ne yazık ki basketbol oynama noktasında üniversitemde yeterli imkanlar yok. 1 senedir saha halen yapılmadı.
       </p>
       <h3>Hakkımda</h3>
       <ul>
         <li>Doğum Tarihi: 2004</li>
-        <li>Eğitim: Sakarya Üniversitesi</li>
+        <li>Eğitim: Sakarya Üniversitesi , Bilgisayar Mühendisliği</li>
         <li>Hobiler: Filmler,diziler, fps oyunları, Basketbol,Futbol</li>
       </ul>
       <h3>Sosyal Medya Bağlantıları</h3>
@@ -63,7 +91,9 @@
     </div>
   </div>
   <hr>
-  <h3>İlgi Alanları</h3>
+  <br>
+  <h2 style="color: red; ">İlgi Alanları</h2>
+  <br>
   <div class="row">
     <div class="col-md-4">
       <div class="card">
@@ -89,6 +119,33 @@
         <div class="card-body">
           <h5 class="card-title">Futbol</h5>
           <p class="card-text">Senelerdir şampiyonluğunu beklediğim fb nin alternatifi olan takım.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="/resimler/F1.jpeg" class="card-img-top" alt="Futbol">
+        <div class="card-body">
+          <h5 class="card-title">Formula 1</h5>
+          <p class="card-text">Sebastian Vettel 2008 monza</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="/resimler/indir (1).jpeg" class="card-img-top" alt="Futbol">
+        <div class="card-body">
+          <h5 class="card-title">Cs 2</h5>
+          <p class="card-text">Hep oynadığım ama hiçbir şekilde kendimi geliştiremediğim oyun.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="/resimler/Luka Dončić😤🏀🔥.jpeg" class="card-img-top" alt="Futbol">
+        <div class="card-body">
+          <h5 class="card-title">Nba</h5>
+          <p class="card-text">Dallas alacak bu sene kupayı doncic abimle inanıyorum.</p>
         </div>
       </div>
     </div>
