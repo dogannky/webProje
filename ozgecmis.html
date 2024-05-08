@@ -5,11 +5,45 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Özgeçmiş</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    /* Renkler */
+    .bg-primary {
+        background-color: #007bff !important;
+    }
+    .bg-secondary {
+        background-color: #6c757d !important;
+    }
+    .bg-success {
+        background-color: #28a745 !important;
+    }
+    .bg-danger {
+        background-color: #dc3545 !important;
+    }
+    .bg-warning {
+        background-color: #ffc107 !important;
+    }
+    .bg-info {
+        background-color: #17a2b8 !important;
+    }
+    .bg-light {
+        background-color: #f8f9fa !important;
+    }
+    .bg-dark {
+        background-color: #343a40 !important;
+    }
+    .bg-white {
+        background-color: #fff !important;
+    }
+    /* Köşeleri yuvarlatma */
+    .rounded {
+        border-radius: 20px !important;
+    }
+</style>
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Şehrim</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="sehrim.html">Şehrim</a>
     <!-- Navbar düğmesi mobil cihazlarda gösterilir -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -35,44 +69,64 @@
         </ul>
     </div>
 </nav>
-      <div class="container mt-4">
-        <h1>Özgeçmiş</h1>
-        <hr>
-    
-        <section>
-            <h2>Eğitim Bilgileri</h2>
-            <article>
-                <h3>Lisans Eğitimi</h3>
-                <p>
-                    <strong>Üniversite:</strong> Sakarya Üniversitesi<br>
-                    <strong>Bölüm:</strong> Bilgisayar Mühendisliği<br>
-                    <strong>Derece:</strong> Lisans<br>
-                    <strong>Başlangıç Yılı:</strong> 2023
-                </p>
-                <p>
-                    <strong>Üniversite:</strong> Atatürk Üniversitesi<br>
-                    <strong>Bölüm:</strong> Diş hekimliği<br>
-                    <strong>Derece:</strong> Lisans<br>
-                    <strong>Başlangıç Yılı:</strong> 2022<br>
-                    <strong> bitiş yılı:</strong>2023<br>
 
-                </p>
-            </article>
-            <article>
-                <h3>Lise Eğitimi</h3>
-                <p>
-                    <strong>Okul:</strong> Nevzat Karabağ Anadolu Lisesi<br>
-                    <strong>Mezuniyet Yılı:</strong> 2022
-                </p>
-                <h3>Ortaöğretim Eğitimi</h3>
-                <p>
-                    <strong>Okul:</strong> 19 Mayıs Ortaokulu<br>
-                    <strong>Mezuniyet Yılı:</strong> 2018
-                </p>
-            </article>
-        </section>
-    </div>
-    
+<div class="container mt-4">
+    <h1>Özgeçmiş</h1>
+    <hr>
+
+    <section>
+        <h2>Eğitim Bilgileri</h2>
+
+        <div class="row">
+            <div class="col-md-6">
+                <article class="bg-primary text-white rounded p-3">
+                    <h3>Lisans Eğitimi</h3>
+                    <p>
+                        <strong>Üniversite:</strong> Sakarya Üniversitesi<br>
+                        <strong>Bölüm:</strong> Bilgisayar Mühendisliği<br>
+                        <strong>Derece:</strong> Lisans<br>
+                        <strong>Başlangıç Yılı:</strong> 2023
+                    </p>
+                </article>
+            </div>
+
+            <div class="col-md-6">
+                <article class="bg-secondary text-white rounded p-3">
+                    <h3>Lisans Eğitimi</h3>
+                    <p>
+                        <strong>Üniversite:</strong> Atatürk Üniversitesi<br>
+                        <strong>Bölüm:</strong> Diş hekimliği<br>
+                        <strong>Derece:</strong> Lisans<br>
+                        <strong>Başlangıç Yılı:</strong> 2022<br>
+                        <strong> bitiş yılı:</strong>2023
+                    </p>
+                </article>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <article class="bg-success text-white rounded p-3">
+                    <h3>Lise Eğitimi</h3>
+                    <p>
+                        <strong>Okul:</strong> Nevzat Karabağ Anadolu Lisesi<br>
+                        <strong>Mezuniyet Yılı:</strong> 2022
+                    </p>
+                </article>
+            </div>
+
+            <div class="col-md-6">
+                <article class="bg-danger text-white rounded p-3">
+                    <h3>Ortaöğretim Eğitimi</h3>
+                    <p>
+                        <strong>Okul:</strong> 19 Mayıs Ortaokulu<br>
+                        <strong>Mezuniyet Yılı:</strong> 2018
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>

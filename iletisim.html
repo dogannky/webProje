@@ -32,9 +32,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="ilgiAlanlarim.html">İlgi Alanlarım</a> 
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="iletisim.html">İletişim</a> 
-                </li>
             </ul>
         </div>
     </nav>
@@ -56,13 +53,6 @@
             <button type="submit" class="btn btn-primary">Gönder</button>
             <button type="button" class="btn btn-secondary" @click="clearForm">Temizle</button>
         </form>
-
-        <div v-if="submitted">
-            <h2>Gönderilen Bilgiler</h2>
-            <p><strong>Adı:</strong> {{ formData.name }}</p>
-            <p><strong>E-posta:</strong> {{ formData.email }}</p>
-            <p><strong>Mesaj:</strong> {{ formData.message }}</p>
-        </div>
     </div>
 
     <script>
@@ -73,20 +63,22 @@
                     name: '',
                     email: '',
                     message: ''
-                },
-                submitted: false
+                }
             },
             methods: {
                 submitForm() {
-                    // Form gönderildiğinde burası çalışacak
-                    this.submitted = true;
+                    // Form gönderildiğinde, gönderilen bilgilerin bulunduğu URL'ye yönlendirme yap
+                    const queryParams = new URLSearchParams();
+                    queryParams.append('name', this.formData.name);
+                    queryParams.append('email', this.formData.email);
+                    queryParams.append('message', this.formData.message);
+                    window.location.href = 'gonderilen-bilgi?' + queryParams.toString();
                 },
                 clearForm() {
                     // Formu temizleme işlemi
                     this.formData.name = '';
                     this.formData.email = '';
                     this.formData.message = '';
-                    this.submitted = false;
                 }
             }
         });
