@@ -1,0 +1,22 @@
+/* style.css */
+
+.card-img-top {
+    height: 500px; /* Resmin orijinal boyutunu koru */
+}
+
+.card-body {
+    font-family: Arial, sans-serif; /* Yazı tipi */
+    color: rgb(51, 104, 153); /* Yazı rengi */
+    font-size: 16px; /* Yazı boyutu */
+    line-height: 1.6; /* Satır yüksekliği */
+}
+
+.card-title {
+    color: #007bff; /* Başlık rengi */
+    font-size: 24px; /* Başlık boyutu */
+    font-weight: bold; /* Kalın font */
+}
+
+.card-text {
+    font-size: 18px; /* Kart metni boyutu */
+}
