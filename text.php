@@ -4,10 +4,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $parola = $_POST["parola"];
 
     // Kullanıcı adı ve parolayı doğrula
-    if ($kullaniciAdi == "dodo" && $parola == "1234") {
+    if ($kullaniciAdi == "B231210370" && $parola == "38437615658253421Bjk@") {
         echo "Hoş geldiniz!";
     } else {
-        echo "Lütfen doğru kullanıcı adı ve parolayı girin.";
+        header("Location: index.html"); // Yanlış giriş durumunda login.php sayfasına yönlendir
+        exit; // Yönlendirmeden sonra işlemi sonlandır
     }
 }
 ?>
