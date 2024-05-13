@@ -7,6 +7,28 @@
 <title>Biyografik Giriş Sayfası</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <style>
+ /* Video ve açıklama için yeni stil tanımlamaları */
+ .video-container {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .video-aciklama {
+      background-color: #f8f9fa; /* Açıklama arka plan rengi */
+      border-left: 5px solid #007bff; /* Sol tarafta mavi bir çizgi */
+      padding: 10px; /* İç boşluk */
+      margin-left: 20px; /* Soldan boşluk */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+      font-family: 'Arial', sans-serif; /* Yazı tipi */
+      color: #333; /* Yazı rengi */
+      width: 100%; /* Tam genişlik */
+    }
+
+    .video-iframe {
+      flex: 1; /* Videoyu esnek yap */
+      margin-right: 20px; /* Sağdan boşluk */
+    }
     .card-img-top {
     
     height: 500px; /* Resmin orijinal boyutunu koru */
@@ -34,7 +56,7 @@
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">Anasayfa</a>
+    <a class="navbar-brand" href="main.html">Anasayfa</a>
     <!-- Navbar düğmesi mobil cihazlarda gösterilir -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -57,7 +79,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="iletisim.html">İletişim</a> 
             </li>
-           
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Log in</a> 
+          </li>
         </ul>
     </div>
 </nav>
@@ -133,7 +157,7 @@
       <div class="card">
         <img src="/resimler/indir (1).jpeg" class="card-img-top" alt="Futbol">
         <div class="card-body">
-          <h5 class="card-title">Cs 2</h5>
+          <h5 class="card-title">CS 2</h5>
           <p class="card-text">Hep oynadığım ama hiçbir şekilde kendimi geliştiremediğim oyun.</p>
         </div>
       </div>
@@ -142,13 +166,28 @@
       <div class="card">
         <img src="/resimler/Luka Dončić😤🏀🔥.jpeg" class="card-img-top" alt="Futbol">
         <div class="card-body">
-          <h5 class="card-title">Nba</h5>
+          <h5 class="card-title">NBA</h5>
           <p class="card-text">Dallas alacak bu sene kupayı doncic abimle inanıyorum.</p>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<div class="container mt-4">
+  <div class="video-container">
+    <div class="video-iframe">
+      <!-- Video -->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/77PsqaWzwG0?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="video-aciklama">
+      <!-- Video açıklaması -->
+      <p>İnanılmaz iyi bir dizi olan Succession'a burada daha fazla yer vermek istiyorum. Trailer'ı bile bambaşka seviye. Sinematografi, karakterlerin uyumu, müzikler, her şey inanılmaz iyi. Basit bir senaryo gibi gözüken ama aslında o kadar güzel işlenmiş bir konuya sahip ki, daha ilk bölümden dizi içerisinden kendinizi soyutlayamıyorsunuz.</p>
+    </div>
+  </div>
+</div>
+
+
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>

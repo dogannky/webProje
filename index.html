@@ -4,41 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            background-color: #f8f9fa;
             margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            padding-top: 80px; /* Navbar yüksekliği kadar padding */
         }
-
         .login-container {
             background-color: #ffffff;
-            padding: 20px;
+            padding: 40px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 300px;
-            width: 100%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 90%;
+            margin: 0 auto; /* Ortalama */
         }
-
         input[type="text"],
         input[type="password"] {
-            width: calc(100% - 20px);
+            width: 100%;
             margin: 10px 0;
-            padding: 10px;
-            border: 1px solid #ccc;
+            padding: 12px;
+            border: 1px solid #ced4da;
             border-radius: 5px;
             outline: none;
         }
-
         button[type="submit"] {
             width: 100%;
-            margin-top: 10px;
-            padding: 10px;
+            margin-top: 20px;
+            padding: 12px;
             background-color: #007bff;
             color: #fff;
             border: none;
@@ -46,31 +41,82 @@
             cursor: pointer;
             outline: none;
         }
-
         button[type="submit"]:hover {
             background-color: #0056b3;
         }
-
         input[type="text"]::placeholder,
         input[type="password"]::placeholder {
             color: #999;
         }
-
         input[type="text"]:focus,
         input[type="password"]:focus {
             border-color: #007bff;
         }
+        /* Navbar stilleri */
+        .navbar {
+            background-color: #343a40 !important;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+        }
+        .navbar-nav .nav-item {
+            margin-right: 10px;
+        }
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-    <div class="login-container">
-        <h2 style="text-align: center;">Login</h2>
-        <form method="post" action="text.php">
-            <input type="text" name="kullanici_adi" placeholder="Kullanıcı Adı">
-            <input type="password" name="parola" placeholder="Parola">
-            <button type="submit">Giriş Yap</button>
-        </form>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="main.html">Anasayfa</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sehrim.html"">Şehrim</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mirasimiz.html">Şehrin Takımı</a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ilgiAlanlarim.html">İlgi Alanlarım</a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="iletisim.html">İletişim</a> 
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Log in</a> 
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <div class="login-container">
+            <h2 class="text-center mb-4">Login</h2>
+            <form method="post" action="text.php">
+                <input type="text" name="kullanici_adi" class="form-control" placeholder="Kullanıcı Adı">
+                <input type="password" name="parola" class="form-control" placeholder="Parola">
+                <button type="submit" class="btn btn-primary btn-block">Giriş Yap</button>
+            </form>
+        </div>
     </div>
-    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
