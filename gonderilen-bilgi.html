@@ -1,11 +1,31 @@
+<!-- gonderilen-bilgi.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gönderilen Bilgiler</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    
+    <div class="container mt-5">
+        <h1>Gönderilen Bilgiler</h1>
+        <div id="displayData">
+            <p>Adınız: <span id="displayName"></span></p>
+            <p>E-posta Adresiniz: <span id="displayEmail"></span></p>
+            <p>Mesajınız: <span id="displayMessage"></span></p>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            // URL'den sorgu parametrelerini al
+            const queryParams = new URLSearchParams(window.location.search);
+            // HTML elemanlarını doldur
+            document.getElementById('displayName').textContent = queryParams.get('name');
+            document.getElementById('displayEmail').textContent = queryParams.get('email');
+            document.getElementById('displayMessage').textContent = queryParams.get('message');
+        };
+    </script>
 </body>
 </html>

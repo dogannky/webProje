@@ -7,6 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($kullaniciAdi == "B231210370" && $parola == "38437615658253421Bjk@") {
         echo "Hoş geldiniz!";
     } else {
+        echo "Kullanıcı adı veya parola yanlış!";
         header("Location: index.html"); // Yanlış giriş durumunda login.php sayfasına yönlendir
         exit; // Yönlendirmeden sonra işlemi sonlandır
     }
