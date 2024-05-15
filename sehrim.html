@@ -5,92 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Şehrim</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- İhtiyaç duyulursa CSS dosyaları buraya eklenebilir -->
     <style>
-        /* Slider stilini belirleme */
         .carousel-item img {
-            height: 400px; /* Slider resimlerinin yüksekliği */
-            object-fit: cover; /* Resmi kapsayıcıya sığdırma */
+            height: 400px;
+            object-fit: cover;
         }
-
-        /* Sayfa genel stilini belirleme */
         .container {
-            max-width: 800px; /* Container'ın maksimum genişliği */
+            max-width: 800px;
         }
-
         h1, h2, h3, h4, h5, h6 {
-            color: #333; /* Başlık renkleri */
+            color: #333;
         }
-
         p {
-            color: #666; /* Paragraf metin rengi */
+            color: #666;
         }
         .city-info {
-    background-color: #f8f9fa; /* Arkaplan rengi */
-    padding: 20px; /* İç boşluk */
-    border-radius: 10px; /* Köşeleri yuvarlama */
-}
-
-.city-places {
-    background-color: #e9ecef; /* Arkaplan rengi */
-    padding: 20px; /* İç boşluk */
-    border-radius: 10px; /* Köşeleri yuvarlama */
-}
-.place {
-    display: flex; /* Flexbox kullanarak içeriği yatay hizalama */
-    margin-bottom: 20px; /* Yerler arası boşluk */
-}
-
-.place-image {
-    flex: 1; /* Resim bölümünü esnek olarak genişlet */
-    margin-right: 20px; /* Resim ile açıklama arası boşluk */
-}
-
-.place-image img {
-    width: 100%; /* Resmi içeride tam genişlikte göster */
-    border-radius: 8px; /* Köşeleri yuvarla */
-}
-
-.place-description {
-    flex: 3; /* Açıklama bölümünü esnek olarak genişlet */
-}
-
-.place-description h3 {
-    color: #333; /* Açıklama başlığı rengi */
-}
-
-.place-description p {
-    color: #666; /* Açıklama metni rengi */
-}
-.place-image img {
-    width: 300px; /* Resmin genişliğini belirleyin */
-    height: auto; /* Yüksekliği otomatik olarak ayarlayın */
-    border-radius: 8px; /* Köşeleri yuvarla */
-}
-.navbar {
-    margin-bottom: 10px; /* Navbar'ın sliderlardan aşağıya kaymasını sağlar */
-}
-
-
-
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .city-places {
+            background-color: #e9ecef;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .place {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .place-image {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .place-image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .place-description {
+            flex: 3;
+        }
+        .place-description h3 {
+            color: #333;
+        }
+        .place-description p {
+            color: #666;
+        }
+        .navbar {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
-
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand" href="main.html">Anasayfa</a>
-    <!-- Navbar düğmesi mobil cihazlarda gösterilir -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <!-- Navbar menüsü -->
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="ozgecmis.html">Özgeçmiş <span class="sr-only">(current)</span></a>
-            </li>
             <li class="nav-item">
+                <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
+            </li>
+            <li class="nav-item active">
                 <a class="nav-link" href="sehrim.html">Şehrim</a>
             </li>
             <li class="nav-item">
@@ -102,56 +79,44 @@
             <li class="nav-item">
                 <a class="nav-link" href="iletisim.html">İletişim</a> 
             </li>
-           
         </ul>
     </div>
 </nav>
+
 <!-- Slider -->
 <div id="slider" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
-        <!-- Slider resimleri -->
         <div class="carousel-item active">
             <a href="https://www.enuygun.com/bilgi/erzurum-da-gezilecek-yerler-1/"> 
-            <img src="resimler/pexels-kadernamuslu-14374507.jpg" class="d-block w-100" alt="Resim 1">
+                <img src="resimler/pexels-kadernamuslu-14374507.jpg" class="d-block w-100" alt="Resim 1">
             </a>
         </div>
         <div class="carousel-item">
             <a href="https://www.enuygun.com/bilgi/erzurum-da-gezilecek-yerler-1/"> 
-            <img src="resimler/pexels-marcheus-17864914.jpg" class="d-block w-100" alt="Resim 2">
+                <img src="resimler/pexels-marcheus-17864914.jpg" class="d-block w-100" alt="Resim 2">
             </a>
         </div>
         <div class="carousel-item">
             <a href="https://www.enuygun.com/bilgi/erzurum-da-gezilecek-yerler-1/"> 
-            <img src="resimler/pexels-oguzhan-akarsu-226041361-12009777.jpg" class="d-block w-100" alt="Resim 3">
+                <img src="resimler/pexels-oguzhan-akarsu-226041361-12009777.jpg" class="d-block w-100" alt="Resim 3">
             </a>
         </div>
         <div class="carousel-item">
             <a href="https://www.enuygun.com/bilgi/erzurum-da-gezilecek-yerler-1/"> 
-            <img src="resimler/pexels-samerdaboul-8247169.jpg" class="d-block w-100" alt="Resim 4">
+                <img src="resimler/pexels-samerdaboul-8247169.jpg" class="d-block w-100" alt="Resim 4">
             </a>
         </div>
         <div class="carousel-item">
             <a href="https://www.enuygun.com/bilgi/erzurum-da-gezilecek-yerler-1/"> 
-            <img src="resimler/pexels-simlibas-12981017.jpg" class="d-block w-100" alt="Resim 4">
+                <img src="resimler/pexels-simlibas-12981017.jpg" class="d-block w-100" alt="Resim 5">
             </a>
         </div>
         <div class="carousel-item">
             <a href="https://www.enuygun.com/bilgi/erzurum-da-gezilecek-yerler-1/"> 
-            <img src="resimler/pexels-yusufensareser-8705202.jpg" class="d-block w-100" alt="Resim 4">
+                <img src="resimler/pexels-yusufensareser-8705202.jpg" class="d-block w-100" alt="Resim 6">
             </a>
         </div>
     </div>
-    <!-- Slider kontrol düğmeleri -->
-    <a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Önceki</span>
-    </a>
-    <a class="carousel-control-next" href="#slider" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Sonraki</span>
-    </a>
-</div>
-    <!-- Slider kontrol düğmeleri -->
     <a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Önceki</span>
@@ -168,13 +133,13 @@
 
     <div class="city-info mb-4">
         <h2>Nüfus</h2>
-        <p>Erzurum, Türkiye'nin Erzurum ilinin merkezi olan şehirdir.Merkezi Erzurum olan il, 749.993[3] nüfusu ile Doğu Anadolu Bölgesi'nin en büyük üçüncü ilidir. .Erzurum Ovası'nın güneydoğu kenarında, bu ova ile Palandöken dağının temas sahasında kurulmuş olan Erzurum, tarihin ilk dönemlerinden beri yerleşim yeridir. Şehir, tarihî eserleri ve kış sporları tesisleriyle de tanınır.</p>
+        <p>Erzurum, Türkiye'nin Erzurum ilinin merkezi olan şehirdir. Merkezi Erzurum olan il, 749.993 nüfusu ile Doğu Anadolu Bölgesi'nin en büyük üçüncü ilidir. Erzurum Ovası'nın güneydoğu kenarında, bu ova ile Palandöken dağının temas sahasında kurulmuş olan Erzurum, tarihin ilk dönemlerinden beri yerleşim yeridir. Şehir, tarihî eserleri ve kış sporları tesisleriyle de tanınır.</p>
     </div>
 
     <h2>Gezilecek Yerler</h2>
-    <div class="place ">
+    <div class="place">
         <div class="place-image">
-            <img src="resimler/erzurum palandöken.jpeg" alt="Gezilecek Yer 1">
+            <img src="resimler/erzurum palandöken.jpeg" alt="Palandöken Kayak Merkezi">
         </div>
         <div class="place-description">
             <h3>Palandöken Kayak Merkezi</h3>
@@ -183,60 +148,59 @@
     </div>
     <div class="place">
         <div class="place-image">
-            <img src="resimler/Tortum şelalesi Erzurum TURKEY.jpeg" alt="Gezilecek Yer 2">
+            <img src="resimler/Tortum şelalesi Erzurum TURKEY.jpeg" alt="Tortum Şelalesi">
         </div>
         <div class="place-description">
             <h3>Tortum Şelalesi</h3>
-            <p>Erzurum'un en bilinen ve çok ziyaret edilen doğa harikalarından biri olan Tortum Şelalesi, Türkiye'nin en büyük, dünyanın ise 3. büyük şelalesi olmasıyla özel bir öneme sahip. 48 metre yükseklik ve 21 metre genişliğiyle benzersiz bir manzara sunan Tortum Şelalesi’ni özellikle bahar ve yaz aylarında düzenlenen fotoğrafçılık ve doğa gezileriyle keşfe çıkabilir, büyüleyici doğal güzellikler arasında yılın yorgunluğunu atabilirsiniz..</p>
+            <p>Erzurum'un en bilinen ve çok ziyaret edilen doğa harikalarından biri olan Tortum Şelalesi, Türkiye'nin en büyük, dünyanın ise 3. büyük şelalesi olmasıyla özel bir öneme sahip. 48 metre yükseklik ve 21 metre genişliğiyle benzersiz bir manzara sunan Tortum Şelalesi’ni özellikle bahar ve yaz aylarında düzenlenen fotoğrafçılık ve doğa gezileriyle keşfe çıkabilir, büyüleyici doğal güzellikler arasında yılın yorgunluğunu atabilirsiniz.</p>
         </div>
     </div>
     <div class="place">
         <div class="place-image">
-            <img src="resimler/Yakutiye Medresesi - Fotoğraf_ Osman Yakıcı.jpeg" alt="Gezilecek Yer 2">
+            <img src="resimler/Yakutiye Medresesi - Fotoğraf_ Osman Yakıcı.jpeg" alt="Yakutiye Medresesi">
         </div>
         <div class="place-description">
             <h3>Yakutiye Medresesi</h3>
-            <p>Günümüzde Türk İslam Eserleri ve Etnografya Müzesi olarak hizmet veren Yakutiye Medresesi, Erzurum'un en önemli ve mutlaka görülmesi gereken tarihi yapılarından biri. 1310 yılında İlhanlı hükümdarı Sultan Olcaytutarafından inşa ettirilen büyüleyici taş yapı, Anadolu inşa edilmiş en büyük kapalı avlulu, eyvanlı ve revaklı medrese olmasıyla da özel bir tarihi öneme sahip. Orijinal mimarisini günümüze kadar korumayı başaran ve uzun yıllar boyunca dini eğitimlerin verildiği tarihi medrese, 1991 yılında restore edilerek etnografya müzesi olarak hizmete açıldı.</p>
+            <p>Günümüzde Türk İslam Eserleri ve Etnografya Müzesi olarak hizmet veren Yakutiye Medresesi, Erzurum'un en önemli ve mutlaka görülmesi gereken tarihi yapılarından biri. 1310 yılında İlhanlı hükümdarı Sultan Olcaytu tarafından inşa ettirilen büyüleyici taş yapı, Anadolu inşa edilmiş en büyük kapalı avlulu, eyvanlı ve revaklı medrese olmasıyla da özel bir tarihi öneme sahip. Orijinal mimarisini günümüze kadar korumayı başaran ve uzun yıllar boyunca dini eğitimlerin verildiği tarihi medrese, 1991 yılında restore edilerek etnografya müzesi olarak hizmete açıldı.</p>
         </div>
     </div>
     <div class="place">
         <div class="place-image">
-            <img src="resimler/Erzurum Kalesi.jpeg" alt="Gezilecek Yer 2">
+            <img src="resimler/Erzurum Kalesi.jpeg" alt="Erzurum Kalesi">
         </div>
         <div class="place-description">
-            <h3>Erzurum kalesi</h3>
+            <h3>Erzurum Kalesi</h3>
             <p>2000 metre uzunluğu bulan devasa surlarıyla şehrin en önemli tarihi hazinelerinden biri olan Erzurum Kalesi, yerli ve yabancı turistlerin ilk uğradığı yerlerden biri. 415 yılında Roma İmparatorluğu döneminde inşa edilen ve uzun tarihinde Asur, Pers, Roma, Bizans, Osmanlı dönemlerinde aktif olarak kullanılan devasa kaleye Saltuklu Beyliği döneminde de İslami mimari özelliklerini yansıtan çeşitli eklemeler yapılmış.</p>
         </div>
     </div>
     <div class="place">
         <div class="place-image">
-            <img src="resimler/Tortum Çayı üzerinde oluşan Tortum Gölü’nün sonundaki şelale, 48 metre yükseklikten dökülmekle birlikte ve 22 metre genişliği ile ziyaretçilerine güzel bir manzara sunuyor_.jpeg" alt="Gezilecek Yer 2">
+            <img src="resimler/Tortum Çayı üzerinde oluşan Tortum Gölü’nün sonundaki şelale, 48 metre yükseklikten dökülmekle birlikte ve 22 metre genişliği ile ziyaretçilerine güzel bir manzara sunuyor_.jpeg" alt="Tortum Gölü">
         </div>
         <div class="place-description">
-            <h3>Tortum gölü</h3>
-            <p>Erzurum’da her doğa tutkununun mutlaka keşfetmesi gereken bir tabiat güzelliği olan Tortum Gölü, Erzurum ile Artvin arasında şehir merkezine yaklaşık 1,5 saat uzaklıkta yer alıyor. Doğayla iç içe zaman geçirmek için gidebileceğiniz en güzel yerlerden olan ve rehberli doğa yürüyüşlerinin değişmez adreslerinden biri haline gelen Tortum Gölü, bir heyelanla Tortum Çayı’nın kapanmasıyla oluşan bir heyelan set gölü..</p>
+            <h3>Tortum Gölü</h3>
+            <p>Erzurum’da her doğa tutkununun mutlaka keşfetmesi gereken bir tabiat güzelliği olan Tortum Gölü, Erzurum ile Artvin arasında şehir merkezine yaklaşık 1,5 saat uzaklıkta yer alıyor. Doğayla iç içe zaman geçirmek için gidebileceğiniz en güzel yerlerden olan ve rehberli doğa yürüyüşlerinin değişmez adreslerinden biri haline gelen Tortum Gölü, bir heyelanla Tortum Çayı’nın kapanmasıyla oluşan bir heyelan set gölü.</p>
         </div>
     </div>
-   
 </div>
 
-<script>
-    // Slider otomatik başlatma ve resimlere tıklandığında yönlendirme kodlarını buraya ekleyin
-    $(document).ready(function(){
-        $('.carousel').carousel({
-            interval: 1000 // Otomatik geçiş süresi (ms cinsinden)
-        });
-    
-        $('.carousel-item').click(function(){
-            var target = $(this).data('target'); // Resmin veri-hedef özelliğini al
-            window.location.href = target; // Yeni sayfaya yönlendir
-        });
-    });
-    </script>
 <!-- Bootstrap ve jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+<script>
+    $(document).ready(function(){
+        $('.carousel').carousel({
+            interval: 3000 // Otomatik geçiş süresi (ms cinsinden)
+        });
+    
+        $('.carousel-item a').click(function(){
+            var target = $(this).attr('href'); // Bağlantının href özelliğini al
+            window.location.href = target; // Yeni sayfaya yönlendir
+            return false; // Bağlantının varsayılan davranışını engelle
+        });
+    });
+</script>
 </body>
 </html>

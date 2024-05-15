@@ -1,4 +1,3 @@
-<!-- gonderilen-bilgi.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,12 +7,43 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="main.html">Anasayfa</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sehrim.html">Şehrim</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mirasimiz.html">Şehrin Takımı</a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ilgiAlanlarim.html">İlgi Alanlarım</a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="iletisim.html">İletişim</a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Log in</a> 
+                </li>
+            </ul>
+        </div>
+    </nav>
     <div class="container mt-5">
         <h1>Gönderilen Bilgiler</h1>
         <div id="displayData">
             <p>Adınız: <span id="displayName"></span></p>
             <p>E-posta Adresiniz: <span id="displayEmail"></span></p>
             <p>Mesajınız: <span id="displayMessage"></span></p>
+            <p>Yaşınız: <span id="displayAge"></span></p>
+            <p>Cinsiyetiniz: <span id="displayGender"></span></p>
+            <p>Bülten Aboneliği: <span id="displayNewsletter"></span></p>
         </div>
     </div>
 
@@ -25,6 +55,9 @@
             document.getElementById('displayName').textContent = queryParams.get('name');
             document.getElementById('displayEmail').textContent = queryParams.get('email');
             document.getElementById('displayMessage').textContent = queryParams.get('message');
+            document.getElementById('displayAge').textContent = queryParams.get('age');
+            document.getElementById('displayGender').textContent = queryParams.get('gender');
+            document.getElementById('displayNewsletter').textContent = queryParams.get('newsletter') === 'true' ? 'Evet' : 'Hayır';
         };
     </script>
 </body>

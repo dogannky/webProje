@@ -88,7 +88,7 @@
                     <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="sehrim.html"">Şehrim</a>
+                    <a class="nav-link" href="sehrim.html">Şehrim</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="mirasimiz.html">Şehrin Takımı</a> 
@@ -108,13 +108,30 @@
     <div class="container mt-4">
         <div class="login-container">
             <h2 class="text-center mb-4">Login</h2>
-            <form method="post" action="text.php">
+            <form name="loginForm" method="post" action="text.php" onsubmit="return validateForm() ">
                 <input type="text" name="kullanici_adi" class="form-control" placeholder="Kullanıcı Adı">
                 <input type="password" name="parola" class="form-control" placeholder="Parola">
                 <button type="submit" class="btn btn-primary btn-block">Giriş Yap</button>
             </form>
         </div>
     </div>
+    <script>
+        function validateForm() {
+            var username = document.forms["loginForm"]["kullanici_adi"].value;
+            var password = document.forms["loginForm"]["parola"].value;
+            if (username == "" || password == "") {
+                alert("Lütfen boşlukları boş bırakmayınız.");
+                return false;
+            }
+            // Check if username is in email format
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(username)) {
+                alert("Kullanıcı adı geçerli bir e-posta adresi formatında olmalıdır.");
+                return false;
+            }
+            return true;
+        }
+    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

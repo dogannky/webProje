@@ -10,11 +10,9 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="navbar-brand" href="main.html">Anasayfa</a>
-        <!-- Navbar düğmesi mobil cihazlarda gösterilir -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- Navbar menüsü -->
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
@@ -53,6 +51,22 @@
                 <label for="message">Mesajınız:</label>
                 <textarea class="form-control" id="message" rows="5" v-model="formData.message" required></textarea>
             </div>
+            <div class="form-group">
+                <label for="age">Yaşınız:</label>
+                <input type="number" class="form-control" id="age" v-model="formData.age" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Cinsiyet:</label>
+                <select class="form-control" id="gender" v-model="formData.gender" required>
+                    <option value="">Seçiniz</option>
+                    <option value="male">Erkek</option>
+                    <option value="female">Kadın</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="newsletter">Bülten Aboneliği:</label>
+                <input type="checkbox" id="newsletter" v-model="formData.newsletter">
+            </div>
             <button type="submit" class="btn btn-primary">Gönder</button>
             <button type="button" class="btn btn-secondary" @click="clearForm">Temizle</button>
         </form>
@@ -71,11 +85,11 @@
             methods: {
                 submitForm() {
                     // Form gönderildiğinde, gönderilen bilgilerin bulunduğu URL'ye yönlendirme yap
-                    const queryParams = new URLSearchParams(gonderilen-bilgi.html);
+                    const queryParams = new URLSearchParams();
                     queryParams.append('name', this.formData.name);
                     queryParams.append('email', this.formData.email);
                     queryParams.append('message', this.formData.message);
-                    window.location.href = 'gonderilen-bilgi?' + queryParams.toString();
+                    window.location.href = 'gonderilen-bilgi.html?' + queryParams.toString();
                 },
                 clearForm() {
                     // Formu temizleme işlemi
