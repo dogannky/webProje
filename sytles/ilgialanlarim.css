@@ -1,0 +1,41 @@
+body {
+    background-color: #f0f0f0; /* Dikkat çekici arka plan rengi */
+    padding-top: 20px; /* Navbar ile body arasındaki boşluk */
+}
+.navbar {
+    margin-bottom: 0; /* Navbar'ın altındaki boşluk */
+}
+body {
+background-color: #e9ecef; /* Açık gri bir arka plan rengi */
+
+}
+h1 {
+color: #007bff;
+text-shadow: 2px 2px #000000; /* Siyah gölge efekti */
+font-size: 2.5rem; /* Daha büyük font boyutu */
+}
+
+
+.song {
+    background-color: #fff; /* Mavi bir arka plan rengi */
+    color: #5b2727; /* Beyaz yazı rengi */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.song:hover {
+    transform: translateY(-5px);
+}
+.song img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.song h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    text-align: center;
+    color: #007bff; /* Dikkat çekici başlık rengi */
+}

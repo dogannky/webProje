@@ -69,6 +69,8 @@
             </div>
             <button type="submit" class="btn btn-primary">Gönder</button>
             <button type="button" class="btn btn-secondary" @click="clearForm">Temizle</button>
+            <button type="button" class="btn btn-info" @click="checkWithJS">JS ile Kontrol Et</button>
+            <button type="button" class="btn btn-warning" @click="checkWithVue">Vue ile Kontrol Et</button>
         </form>
     </div>
 
@@ -79,7 +81,10 @@
                 formData: {
                     name: '',
                     email: '',
-                    message: ''
+                    message: '',
+                    age: '',
+                    gender: '',
+                    newsletter: false
                 }
             },
             methods: {
@@ -89,6 +94,9 @@
                     queryParams.append('name', this.formData.name);
                     queryParams.append('email', this.formData.email);
                     queryParams.append('message', this.formData.message);
+                    queryParams.append('age', this.formData.age);
+                    queryParams.append('gender', this.formData.gender);
+                    queryParams.append('newsletter', this.formData.newsletter);
                     window.location.href = 'gonderilen-bilgi.html?' + queryParams.toString();
                 },
                 clearForm() {
@@ -96,6 +104,61 @@
                     this.formData.name = '';
                     this.formData.email = '';
                     this.formData.message = '';
+                    this.formData.age = '';
+                    this.formData.gender = '';
+                    this.formData.newsletter = false;
+                },
+                checkWithJS() {
+                    // JS ile form kontrolü
+                    if (!this.formData.name) {
+                        alert('Lütfen adınızı giriniz.');
+                        return;
+                    }
+                    if (!this.formData.email) {
+                        alert('Lütfen e-posta adresinizi giriniz.');
+                        return;
+                    }
+                    if (!this.formData.message) {
+                        alert('Lütfen mesajınızı giriniz.');
+                        return;
+                    }
+                    if (!this.formData.age || isNaN(this.formData.age) || this.formData.age <= 0) {
+                        alert('Lütfen geçerli bir yaş giriniz.');
+                        return;
+                    }
+                    if (!this.formData.gender) {
+                        alert('Lütfen cinsiyetinizi seçiniz.');
+                        return;
+                    }
+                    alert('JS ile kontrol tamamlandı. Her şey doğru görünüyor.');
+                },
+                checkWithVue() {
+                    // Vue ile form kontrolü
+                    if (!this.formData.name) {
+                        alert('Lütfen adınızı giriniz.');
+                        return;
+                    }
+                    if (!this.validEmail(this.formData.email)) {
+                        alert('Lütfen geçerli bir e-posta adresi giriniz.');
+                        return;
+                    }
+                    if (!this.formData.message) {
+                        alert('Lütfen mesajınızı giriniz.');
+                        return;
+                    }
+                    if (!this.formData.age || isNaN(this.formData.age) || this.formData.age <= 0) {
+                        alert('Lütfen geçerli bir yaş giriniz.');
+                        return;
+                    }
+                    if (!this.formData.gender) {
+                        alert('Lütfen cinsiyetinizi seçiniz.');
+                        return;
+                    }
+                    alert('Vue ile kontrol tamamlandı. Her şey doğru görünüyor.');
+                },
+                validEmail(email) {
+                    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    return re.test(email);
                 }
             }
         });

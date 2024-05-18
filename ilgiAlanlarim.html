@@ -5,49 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eminem - En İyi Şarkıları</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            background-color: #f0f0f0; /* Dikkat çekici arka plan rengi */
-            padding-top: 20px; /* Navbar ile body arasındaki boşluk */
-        }
-        .navbar {
-            margin-bottom: 0; /* Navbar'ın altındaki boşluk */
-        }
-        body {
-    background-color: #e9ecef; /* Açık gri bir arka plan rengi */
-
-    }
-    h1 {
-    color: #007bff;
-    text-shadow: 2px 2px #000000; /* Siyah gölge efekti */
-    font-size: 2.5rem; /* Daha büyük font boyutu */
-    }
-
-
-        .song {
-            background-color: #fff; /* Mavi bir arka plan rengi */
-            color: #5b2727; /* Beyaz yazı rengi */
-            margin-bottom: 20px;
-            transition: transform 0.3s ease-in-out;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .song:hover {
-            transform: translateY(-5px);
-        }
-        .song img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        .song h3 {
-            font-size: 1.2rem;
-            margin-top: 10px;
-            text-align: center;
-            color: #007bff; /* Dikkat çekici başlık rengi */
-        }
-    </style>
+    <link rel="stylesheet" href="./sytles/ilgialanlarim.css">
+      
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -80,13 +39,13 @@
     </nav>
     
     <div class="container mt-4">
-        <h1 class="text-center mb-4" style="color: #007bff;">EN HİT ŞARKILAR</h1>
+        <h1 class="text-center mb-4" style="color: #007bff;">ÜSTAT HANS ZIMMERDAN EN İYİLER</h1>
         <div id="songList" class="row"></div>
     </div>
 
     <script>
         const API_KEY = 'AIzaSyDlE7RT7ZS3igN3chXo-S4lRXOu35o7pYc'; // YouTube Data API anahtarını buraya ekleyin
-        const query = 'eminem'; // Eminem'in en iyi şarkılarını aramak için sorgu
+        const query = 'The best Concert of Hans zimmer'; // Eminem'in en iyi şarkılarını aramak için sorgu
 
         // YouTube API'den Eminem'in en iyi şarkılarını almak için sorgu URL'si
         const API_URL = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${query}&type=video&key=${API_KEY}`;
